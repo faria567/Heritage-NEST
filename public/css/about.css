@@ -1,0 +1,107 @@
+/* custom.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.highlight {
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+}
+
+.story, .team, .testimonials {
+    padding: 20px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    text-align: center;
+    margin: 10px;
+    flex-basis: 100%;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+@media (min-width: 600px) {
+    .team-member {
+        flex-basis: calc(50% - 20px);
+    }
+
+    .highlight {
+        margin: 20px;
+    }
+}
+
+@media (min-width: 900px) {
+    .team-member {
+        flex-basis: calc(33.33% - 20px);
+    }
+
+    .highlight {
+        margin: 30px;
+    }
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+footer nav ul {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer nav ul li {
+    margin: 10px;
+}
