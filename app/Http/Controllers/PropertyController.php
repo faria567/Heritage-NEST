@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Property;
 use Illuminate\Http\Request;
+use App\Models\Property;
 
 class PropertyController extends Controller
 {
     public function index()
     {
         $properties = Property::all();
-        return view('properties.index', compact('properties'));
+        return view('property.index', compact('properties'));
     }
 
-    public function show(Property $property)
+    public function show($id)
     {
-        return view('properties.show', compact('property'));
+        $property = Property::findOrFail($id);
+        return view('property.show', compact('property'));
     }
 }
